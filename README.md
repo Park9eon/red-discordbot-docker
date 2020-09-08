@@ -14,7 +14,7 @@ docker run --rm \
     -e REDBOT_TOKEN=${REDBOT_TOKEN} \
     -e REDBOT_PREFIX=! \
     -v $PWD/data:/data \
-    -it redbot
+    -it docker.pkg.github.com/park9eon/red-discordbot-docker/redbot:latest
 ```
 
 ## docker-compose.yml
@@ -23,7 +23,7 @@ version: "3.8"
 
 services:
   redbot:
-    build: .
+    image: docker.pkg.github.com/park9eon/red-discordbot-docker/redbot:latest
     environment:
       REDBOT_NAME: redbot
       REDBOT_STORAGE_TYPE: POSTGRES
